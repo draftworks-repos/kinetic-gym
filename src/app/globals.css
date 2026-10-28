@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  /* --color-primary: #ff5500; */
+  --color-primary: #e04b00;
+  --color-primary-dark: #a63500;
+  --color-primary-hover: #ff5500;
+  --color-secondary: #111827;
+  --color-tertiary: #ff8a3d;
+  --color-quaternary: #5c4037;
+  --color-neutral: #6b7280;
+  --color-canvas: #fafafa;
+  --color-surface-1: #ffffff;
+  --color-surface-2: #f3f4f6;
+  --color-border: #e5e7eb;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+
+  /* ── transitions-dev Canonical Motion Tokens ─────────────────── */
+  /* Durations */
+  --duration-stagger: 40ms;
+  --duration-micro: 80ms;
+  --duration-quick: 150ms;
+  --duration-fast: 250ms;
+  --duration-medium: 350ms;
+  --duration-slow: 400ms;
+  --duration-very-slow: 500ms;
+
+  /* Easings */
+  --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: ease-in-out;
+  --ease-out: ease-out;
+  --ease-linear: linear;
+  --ease-bounce: cubic-bezier(0.34, 1.36, 0.64, 1);
+  --ease-bounce-strong: cubic-bezier(0.34, 3.85, 0.64, 1);
+
+  /* Distances */
+  --distance-micro: 4px;
+  --distance-small: 6px;
+  --distance-base: 8px;
+  --distance-medium: 12px;
+  --distance-large: 30px;
+
+  /* Scales */
+  --scale-large: 0.96;
+  --scale-medium: 0.97;
+  --scale-small: 0.98;
+  --scale-tiny: 0.99;
+
+  /* Blur */
+  --blur-small: 2px;
+  --blur-medium: 3px;
+  --blur-large: 8px;
+
+  /* Component Recipes - Accordion */
+  --acc-expand: 250ms;
+  --acc-collapse: 250ms;
+  --acc-chevron: 250ms;
+  --acc-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Component Recipes - Dropdown / Drawer */
+  --dropdown-open-dur: 250ms;
+  --dropdown-close-dur: 150ms;
+  --dropdown-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-canvas);
+  color: var(--color-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Space Grotesk for Display, Headlines, Badges, Metrics and Buttons */
+h1,
+h2,
+h3,
+h4,
+.brand-main-title,
+.hero-headline,
+.facility-headline,
+.programs-headline,
+.transformations-headline,
+.why-hero-title,
+.why-item-question,
+.inside-club-headline,
+.bento-title,
+.coaches-headline,
+.coach-name,
+.testimonials-headline,
+.faq-headline,
+.faq-question-btn,
+.cta-banner-headline,
+.stat-number,
+.stat-title,
+.marquee-item,
+.section-label,
+.btn-join-now,
+.btn-hero-primary,
+.btn-hero-secondary,
+.btn-why-trial,
+.btn-cta-claim,
+.program-title,
+.program-tag-badge,
+.badge-before,
+.badge-after,
+.bento-zone-tag,
+.club-spec-badge {
+  font-family: var(--font-display);
+}
+
+/* Ensure 8px standardized corner radius for buttons per design system */
+.btn-join-now,
+.btn-hero-primary,
+.btn-hero-secondary,
+.btn-why-trial,
+.btn-cta-claim,
+.coach-book-btn {
+  border-radius: 8px !important;
+}

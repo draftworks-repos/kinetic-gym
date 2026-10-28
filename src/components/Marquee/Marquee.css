@@ -1,0 +1,71 @@
+.marquee-section {
+  width: 100%;
+  background-color: var(--color-primary-hover);
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.95rem 0;
+  box-shadow: 0 4px 15px rgba(255, 85, 0, 0.25);
+}
+
+.marquee-wrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: marquee-scroll 24s linear infinite;
+  will-change: transform;
+}
+
+/* Intersection observer toggles running vs paused */
+.marquee-track.animation-running {
+  animation-play-state: running;
+}
+
+.marquee-track.animation-paused {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 0 1.25rem;
+}
+
+.marquee-bullet {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  margin-right: 1.25rem;
+}
+
+.marquee-bullet.diamond {
+  border-radius: 1px;
+  transform: rotate(45deg);
+  background-color: #ffe0cc;
+}
